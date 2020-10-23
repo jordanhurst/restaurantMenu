@@ -5,7 +5,6 @@ namespace restaurantMenu
 {
     public class Menu
     {
-        private DateTime TimeStamp { get; private set; } = new DateTime();
         private List<MenuItem> appetizers = new List<MenuItem>();
         private List<MenuItem> mains = new List<MenuItem>();
         private List<MenuItem> desserts = new List<MenuItem>();
@@ -35,7 +34,7 @@ namespace restaurantMenu
 
         public void DisplayMenu()
         {
-            Console.WriteLine("Appetizers\n"+ lineDivider)
+            Console.WriteLine("Appetizers\n" + lineDivider);
             foreach (MenuItem item in appetizers)
             {
                 string isItNew = "";
@@ -43,10 +42,10 @@ namespace restaurantMenu
                 {
                     isItNew = "recently added!";
                 }
-                string itemString = item.Name + "   $" + item.Cost.ToString() + "   " + isItNew + "\n" + item.Description + "\n";
+                string itemString = item.Name + " -  $" + item.Cost.ToString() + " -  " + isItNew + "\n" + item.Description + "\n\n";
                 Console.WriteLine(itemString);
             }
-            Console.WriteLine("\n\n" + lineDivider + "Main Entrees\n" + lineDivider);
+            Console.WriteLine("\n\n" + lineDivider + "\nMain Entrees\n" + lineDivider);
             foreach (MenuItem item in mains)
             {
                 string isItNew = "";
@@ -54,10 +53,10 @@ namespace restaurantMenu
                 {
                     isItNew = "recently added!";
                 }
-                string itemString = item.Name + "   $" + item.Cost.ToString() + "   " + isItNew + "\n" + item.Description + "\n";
+                string itemString = item.Name + " -  $" + item.Cost.ToString() + " -  " + isItNew + "\n" + item.Description + "\n\n";
                 Console.WriteLine(itemString);
             }
-            Console.WriteLine("\n\n" + lineDivider + "Desserts\n" + lineDivider);
+            Console.WriteLine("\n\n" + lineDivider + "\nDesserts\n" + lineDivider);
             foreach (MenuItem item in desserts)
             {
                 string isItNew = "";
@@ -65,7 +64,7 @@ namespace restaurantMenu
                 {
                     isItNew = "recently added!";
                 }
-                string itemString = item.Name + "   $" + item.Cost.ToString() + "   " + isItNew + "\n" + item.Description + "\n";
+                string itemString = item.Name + " -  $" + item.Cost.ToString() + " -  " + isItNew + "\n" + item.Description + "\n\n";
                 Console.WriteLine(itemString);
             }
 

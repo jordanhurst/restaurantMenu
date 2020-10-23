@@ -5,16 +5,7 @@ namespace restaurantMenu
     {
         public string Name { get; private set; }
         public double Cost { get; private set; }
-        public string Category
-        {
-            get; private set
-            {
-                if ((value != "dessert") || (value != "main") || (value != "appetizer"))
-                {
-                    throw new ArgumentException("category must be 'appetizer' 'main' or 'dessert'");
-                };
-            }
-        }
+        public string Category { get; private set; }
         public string Description { get; private set; }
         public DateTime currentDate = DateTime.Now;
         internal DateTime dateAdded;
@@ -25,7 +16,7 @@ namespace restaurantMenu
             Cost = cost;
             Category = category;
             Description = description;
-            DateTime dateAdded = currentDate;
+            dateAdded = currentDate;
         }
     }
 }
